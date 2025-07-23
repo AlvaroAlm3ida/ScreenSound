@@ -22,13 +22,24 @@ void ExibirOpcoesDoMenu()
     Console.WriteLine("Digite 4 para ver a média de uma banda");
     Console.WriteLine("Digite -1 para sair");
 
-    Console.Write("\nDigite a sua opção");
+    Console.Write("\nDigite a sua opção: ");
     //Pegando os numéros e guardando em uma variável, o sinal de ! indica que o valor não pode ser nulo
     string opcaoEscolhida = Console.ReadLine()!;
     int opcaoEscolhidaNumerica = int.Parse(opcaoEscolhida);
-    if (opcaoEscolhidaNumerica == 1)
+    switch (opcaoEscolhidaNumerica)
     {
-        Console.WriteLine("Você digitou a opção " + opcaoEscolhida!);
+        case 1: Console.WriteLine("Você escolheu a opção "+ opcaoEscolhidaNumerica);
+            break;
+        case 2: Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+            break;
+        case 3: Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+            break;
+        case 4: Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+            break;
+        case -1: Console.WriteLine("Tchau Tchau ;)");
+            break;
+        default: Console.WriteLine("Opção inválida");
+            break;
     }
 }
 
